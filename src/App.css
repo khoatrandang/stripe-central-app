@@ -1,0 +1,25 @@
+.holder {
+  display: flex;
+  flex-direction: row;
+}
+.tabs {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.body {
+  margin-left: 100px;
+}
+.selected {
+  color: #13f;
+}
+.unselected {
+  color: #fff;
+}
+.holder {
+  display: flex;
+  background: #bbb;
+}
+.tabs {
+  display: flex;
+}
