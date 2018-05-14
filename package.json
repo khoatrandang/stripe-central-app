@@ -1,5 +1,5 @@
 {
-  "name": "stripe-central",
+  "name": "stripe-central-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
