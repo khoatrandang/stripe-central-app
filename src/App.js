@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { StripeProvider } from 'react-stripe-elements';
 import { Tabs, Tab } from './components/Tabs';
 import Checkout from './components/Checkout';
 import Payments from './components/Payments';
@@ -15,14 +16,16 @@ const SuperPayment = withStripeData(Payments, KEY_DATA.publicKey, KEY_DATA.secre
 class App extends Component {
 	render() {
 		return (
-			<Tabs>
-				<Tab name="Checkouts">
-					<SuperCheckout/>
-				</Tab>
-				<Tab name="Payments">
-					<SuperPayment/>
-				</Tab>
-			</Tabs>
+			<StripeProvider apiKey={KEY_DATA.publicKey}>
+				<Tabs>
+					<Tab name="Checkouts">
+						<SuperCheckout/>
+					</Tab>
+					<Tab name="Payments">
+						<SuperPayment/>
+					</Tab>
+				</Tabs>
+			</StripeProvider>
 		);
 	}
 }

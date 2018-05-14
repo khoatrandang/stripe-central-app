@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 
 export function withStripeData(WrappedComponent, publicKey, secretKey, route) {
 	const base = class extends React.Component {
