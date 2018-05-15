@@ -18,7 +18,7 @@ class App extends Component {
 		this.state = {stripe: null};
 	}
 
-	componentDidMount() {
+	componentWillMount() {
 		if (window.Stripe) {
 		  	this.setState({stripe: window.Stripe(KEY_DATA.publicKey)});
 		} else {
@@ -30,11 +30,12 @@ class App extends Component {
 	}
 
 	render() {
+		console.log("stripe: ", this.state.stripe);
 		return (
 			<StripeProvider stripe={this.state.stripe}>
 				<Tabs>
 					<Tab name="Checkouts">
-						<Checkout/>
+						<Checkout stripe={this.state.stripe}/>
 					</Tab>
 					<Tab name="Payments">
 						<SuperPayment/>
