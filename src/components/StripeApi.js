@@ -23,7 +23,6 @@ export function withStripeData(WrappedComponent, publicKey, secretKey, route) {
 			});
 
 			const responseData = await this.props.getSecret(route);
-			console.log("responseData: ", responseData);
 			
 			this.setState({
 				data: responseData.data,

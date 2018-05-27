@@ -33,8 +33,7 @@ export class Tabs extends Component {
 	}
 
 	render() {
-		console.log("children: ", this.props.children);
-		const tabs = React.Children.map(this.props.children, (child) => {
+ 		const tabs = React.Children.map(this.props.children, (child) => {
 			const className = (child.props.name === this.state.selected) ? "selected" : "unselected";
 
 			return (

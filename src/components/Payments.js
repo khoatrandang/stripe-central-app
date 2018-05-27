@@ -36,8 +36,6 @@ export default class Payments extends Component {
 
 class Payment extends React.Component {
     render() {
-        console.log("props: ", this.props);
-
         return (
             <tr>
                 <td>{this.props.payment.id}</td>
