@@ -30,7 +30,6 @@ class App extends Component {
 	}
 
 	render() {
-		console.log("stripe: ", this.state.stripe);
 		return (
 			<StripeProvider stripe={this.state.stripe}>
 				<Tabs>
